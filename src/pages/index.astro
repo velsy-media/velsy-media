@@ -1,0 +1,28 @@
+---
+import Problems from "../components/Problems.astro";
+import Contact from "../components/Contact.astro";
+import ServicesSection from "../components/ServicesSection.jsx";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="text-gray-900 font-sans">
+    <div class="h-screen flex flex-col items-center justify-center">
+      <!-- Main Content -->
+      <div class="text-center">
+        <!-- VM Logo -->
+        <h1 class="text-9xl font-extrabold text-black tracking-widest relative">
+          <span class="bg-clip-text bg-black-pattern">VM</span>
+        </h1>
+        <!-- Tagline -->
+        <p class="text-gray-700 text-lg mt-4">IMPACT BEYOND WORDS</p>
+      </div>
+    </div>
+
+    <Problems />
+    <ServicesSection client:load />
+    <Contact />
+    <Footer />
+  </main>
+</Layout>
