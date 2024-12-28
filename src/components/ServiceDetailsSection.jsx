@@ -7,7 +7,7 @@ const ServiceDetailsSection = ({ mainTitle, subtitle, items }) => {
       <div className="bg-gray-50">
         <div className="container mx-auto px-6 text-center">
           {/* Heading */}
-          <h1 className="text-8xl font-extrabold text-black">
+          <h1 className="text-5xl md:text-8xl font-extrabold text-black">
             {mainTitle} <span className="text-yellow-500">.</span>
           </h1>
           {/* Underline */}
@@ -31,7 +31,7 @@ const ServiceDetailsSection = ({ mainTitle, subtitle, items }) => {
                   />
                 </div>
                 <div>
-                  <h2 className="text-5xl font-bold text-slate-950 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold text-slate-950 mb-4">
                     {item.title}
                   </h2>
                   <p className="text-slate-950 text-lg mb-5 font-mono">
@@ -42,7 +42,7 @@ const ServiceDetailsSection = ({ mainTitle, subtitle, items }) => {
             ) : (
               <>
                 <div>
-                  <h2 className="text-5xl font-bold text-slate-950 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold text-slate-950 mb-4">
                     {item.title}
                   </h2>
                   <p className="text-slate-950 text-lg mb-5 font-mono">

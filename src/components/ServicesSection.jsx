@@ -19,7 +19,7 @@ const ServicesSection = () => {
 
   const data = {
     BrandConsistency: {
-      mainTitle: "Brand",
+      mainTitle: "Brand Consistency",
       subtitle:
         "We ensure your brand maintains consistency across all platforms to build a stronger and more recognizable identity.",
       items: [
