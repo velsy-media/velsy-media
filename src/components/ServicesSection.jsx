@@ -225,51 +225,46 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section className="bg-gray-50 py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-12 px-6">
+        <div className="max-w-7xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-extrabold mb-4">
+          <h2 className="text-4xl font-bold mb-8">
             Our{" "}
             <span className="text-yellow-500 underline underline-offset-4 decoration-4">
               Services
             </span>
           </h2>
-          {/* Services List */}
-          <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Left List */}
-            <ul className="space-y-4 text-lg text-left">
-              {services.slice(0, 5).map((service, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => handleServiceClick(service.name)}
-                    className={`text-black hover:text-yellow-500 transition duration-300 ease-in-out transform hover:scale-105 ${selectedService === service.name
-                        ? "text-yellow-500 font-bold"
-                        : ""
-                      }`}
-                  >
-                    {service.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-            {/* Divider */}
-            <div className="h-auto w-px bg-black hidden md:block"></div>
-            {/* Right List */}
-            <ul className="space-y-4 text-lg text-left">
-              {services.slice(5).map((service, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => handleServiceClick(service.name)}
-                    className={`text-black hover:text-yellow-500 transition duration-300 ease-in-out transform hover:scale-105 ${selectedService === service.name
-                        ? "text-yellow-500 font-bold"
-                        : ""
-                      }`}
-                  >
-                    {service.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
+
+          {/* Services Grid */}
+         
+          {/* Horizontal Scrollable List */}
+          <div className="flex overflow-x-auto space-x-6 scrollbar-hide py-4 px-2">
+            {services.map((service, index) => (
+              <button
+                key={index}
+                onClick={() => handleServiceClick(service.name)}
+                className={`flex-shrink-0 w-48 bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center transition transform hover:scale-105 hover:shadow-xl ${
+                  selectedService === service.name
+                    ? "bg-yellow-500 text-white shadow-md"
+                    : "text-gray-800"
+                }`}
+              >
+                <div
+                  className={`text-3xl mb-4 ${
+                    selectedService === service.name ? "text-white" : "text-yellow-500"
+                  }`}
+                >
+                  {service.icon}
+                </div>
+                <h3
+                  className={`text-lg font-semibold text-center ${
+                    selectedService === service.name ? "text-white" : "text-gray-800"
+                  }`}
+                >
+                  {service.name}
+                </h3>
+              </button>
+            ))}
           </div>
         </div>
       </section>
